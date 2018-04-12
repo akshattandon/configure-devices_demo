@@ -22,8 +22,8 @@ eureka:
 spring:
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: ${JDBC_DATABASE_URL}
-        username: ${JDBC_DATABASE_USERNAME}
-        password: ${JDBC_DATABASE_PASSWORD}
+        url: jdbc:mysql://sql9.freesqldatabase.com:3306/sql9232151?useUnicode=true&characterEncoding=utf8&useSSL=false
+        username: sql9232151
+        password: 3H2z9CptxD
         hikari:
             maximumPoolSize: 8
