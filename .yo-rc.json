@@ -36,6 +36,7 @@
       "en"
     ],
     "enableHibernateCache": false,
-    "herokuDeployType": "git"
+    "herokuDeployType": "git",
+    "herokuAppName": "configuredevices"
   }
 }
