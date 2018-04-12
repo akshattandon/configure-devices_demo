@@ -1,0 +1,37 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "device",
+            "otherEntityName": "device",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "deviceStatus"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "details",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "threshold",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "total",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180411225119",
+    "entityTableName": "device_status",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

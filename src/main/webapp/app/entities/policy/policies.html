@@ -1,0 +1,62 @@
+<div>
+    <h2 data-translate="configuredevicesApp.policy.home.title">Policies</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="policy.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="configuredevicesApp.policy.home.createLabel">
+                        Create new Policy
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="configuredevicesApp.policy.policyName">Policy Name</span></th>
+                    <th><span data-translate="configuredevicesApp.policy.firmwareVersion">Firmware Version</span></th>
+                    <th><span data-translate="configuredevicesApp.policy.device">Device</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="policy in vm.policies track by policy.id">
+                    <td><a ui-sref="policy-detail({id:policy.id})">{{policy.id}}</a></td>
+                    <td>{{policy.policyName}}</td>
+                    <td>{{policy.firmwareVersion}}</td>
+                    <td>
+                        <a ui-sref="device-detail({id:policy.device.id})">{{policy.device.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="policy-detail({id:policy.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="policy.edit({id:policy.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="policy.delete({id:policy.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span data-translate="configuredevicesApp.deviceStatus.detail.title">Device Status</span> {{vm.deviceStatus.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="configuredevicesApp.deviceStatus.status">Status</span></dt>
+        <dd>
+            <span>{{vm.deviceStatus.status}}</span>
+        </dd>
+        <dt><span data-translate="configuredevicesApp.deviceStatus.details">Details</span></dt>
+        <dd>
+            <span>{{vm.deviceStatus.details}}</span>
+        </dd>
+        <dt><span data-translate="configuredevicesApp.deviceStatus.threshold">Threshold</span></dt>
+        <dd>
+            <span>{{vm.deviceStatus.threshold}}</span>
+        </dd>
+        <dt><span data-translate="configuredevicesApp.deviceStatus.total">Total</span></dt>
+        <dd>
+            <span>{{vm.deviceStatus.total}}</span>
+        </dd>
+        <dt><span data-translate="configuredevicesApp.deviceStatus.device">Device</span></dt>
+        <dd>
+            <a ui-sref="device-detail({id:vm.deviceStatus.device.id})">{{vm.deviceStatus.device.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="device-status-detail.edit({id:vm.deviceStatus.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,27 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "device",
+            "otherEntityName": "device",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "policyName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "firmwareVersion",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180411225122",
+    "entityTableName": "policy",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

@@ -1,0 +1,26 @@
+
+{
+    "configuredevicesApp": {
+        "deviceStatus" : {
+            "home": {
+                "title": "Device Statuses",
+                "createLabel": "Create a new Device Status",
+                "createOrEditLabel": "Create or edit a Device Status"
+            },
+            "created": "A new Device Status is created with identifier {{ param }}",
+            "updated": "A Device Status is updated with identifier {{ param }}",
+            "deleted": "A Device Status is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Device Status {{ id }}?"
+            },
+            "detail": {
+                "title": "Device Status"
+            },
+            "status": "Status",
+            "details": "Details",
+            "threshold": "Threshold",
+            "total": "Total",
+            "device": "Device"
+        }
+    }
+}

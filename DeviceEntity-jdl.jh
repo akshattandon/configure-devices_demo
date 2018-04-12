@@ -1,0 +1,37 @@
+entity DeviceStatus {
+	status String,
+  details String,
+  threshold String,
+  total String
+}
+
+entity Location {
+  countryName String,
+	streetAddress String,
+	city String,
+	stateProvince String
+}
+
+/**
+ * Device Entity
+ */
+entity Device {
+	deviceName String required
+}
+
+entity Policy {
+	policyName String,
+	firmwareVersion String
+}
+
+
+// defining multiple oneToOne relationships
+relationship OneToOne {
+  DeviceStatus{device} to Device,
+	Location{device} to Device
+}
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	Device{policy} to Policy
+}

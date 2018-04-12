@@ -8,7 +8,7 @@
     "baseName": "configuredevices",
     "packageName": "com.akshat.configuredevices",
     "packageFolder": "com/akshat/configuredevices",
-    "serverPort": "8080",
+    "serverPort": "9090",
     "authenticationType": "jwt",
     "cacheProvider": "no",
     "websocket": false,
@@ -34,6 +34,7 @@
     "nativeLanguage": "en",
     "languages": [
       "en"
-    ]
+    ],
+    "enableHibernateCache": false
   }
 }

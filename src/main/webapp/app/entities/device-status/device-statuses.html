@@ -1,0 +1,66 @@
+<div>
+    <h2 data-translate="configuredevicesApp.deviceStatus.home.title">Device Statuses</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="device-status.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="configuredevicesApp.deviceStatus.home.createLabel">
+                        Create new Device Status
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="configuredevicesApp.deviceStatus.status">Status</span></th>
+                    <th><span data-translate="configuredevicesApp.deviceStatus.details">Details</span></th>
+                    <th><span data-translate="configuredevicesApp.deviceStatus.threshold">Threshold</span></th>
+                    <th><span data-translate="configuredevicesApp.deviceStatus.total">Total</span></th>
+                    <th><span data-translate="configuredevicesApp.deviceStatus.device">Device</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="deviceStatus in vm.deviceStatuses track by deviceStatus.id">
+                    <td><a ui-sref="device-status-detail({id:deviceStatus.id})">{{deviceStatus.id}}</a></td>
+                    <td>{{deviceStatus.status}}</td>
+                    <td>{{deviceStatus.details}}</td>
+                    <td>{{deviceStatus.threshold}}</td>
+                    <td>{{deviceStatus.total}}</td>
+                    <td>
+                        <a ui-sref="device-detail({id:deviceStatus.device.id})">{{deviceStatus.device.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="device-status-detail({id:deviceStatus.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="device-status.edit({id:deviceStatus.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="device-status.delete({id:deviceStatus.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
