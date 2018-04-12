@@ -1,3 +1,4 @@
+
 (function() {
     'use strict';
 
@@ -19,15 +20,6 @@
         });
 
         getAccount();
-        
-        $scope.map = { center: { latitude: 59.330009, longitude: 18.055628 }, zoom: 14 };
-        $scope.markers = [];
-        HipsterPoi.query(function(pois) {
-                angular.forEach(pois, function(poi){
-                    this.push(poi);
-                }, $scope.markers);
-            }
-        );
 
         function getAccount() {
             Principal.identity().then(function(account) {
